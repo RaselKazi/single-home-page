@@ -4,7 +4,7 @@ import {  BsSearch } from "react-icons/bs";
 import { AiOutlineAlignLeft } from "react-icons/ai";
 import logo from "../img/logo.svg";
 const Container = styled.div`
-  background-color: #400d40;
+  background-color: #4B154B;
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -106,7 +106,6 @@ const Button2 = styled.button`
 const MenuButton = styled.div`
 width:20px;
   margin-right: 30px;
-
   font-size: 25px;
   font-wight: 900;
   color: white;
@@ -123,7 +122,7 @@ right:10px;
 width: 70%;
 border-radius: 10px;
   padding: 10px 15px;
-  background-color: #400d50;
+  background-color: #3C0E3C;
   display: none;
   z-index:100;
   @media only screen and (max-width: 640px) {

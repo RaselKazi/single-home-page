@@ -11,7 +11,7 @@ import demo2 from "../video/flexibility.webm";
 import demo3 from "../video/speed.webm";
 import { BsArrowRight } from "react-icons/bs";
 const Container = styled.div`
-  background-color: #f7f2f7;
+  background-color: #F4ECE8;
   @media only screen and (max-width: 480px) {
     flex-direction: column;
   }

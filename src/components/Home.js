@@ -3,7 +3,7 @@ import styled from "styled-components";
 import { FcGoogle } from "react-icons/fc";
 import homevideo from "../video/home.webm";
 const Container = styled.div`
-  background-color: #400d40;
+  background-color: #4B154B;
   height: 90vh;
   
 `;
