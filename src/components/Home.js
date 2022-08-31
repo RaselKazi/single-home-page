@@ -5,10 +5,7 @@ import homevideo from "../video/home.webm";
 const Container = styled.div`
   background-color: #400d40;
   height: 90vh;
-  @media only screen and (max-width: 480px) {
-    flex-direction: column;
-    height: auto;
-  }
+  
 `;
 const Wrapper = styled.div`
   display: flex;
@@ -16,14 +13,18 @@ const Wrapper = styled.div`
   width: 80%;
   justify-content: space-between;
   margin: auto;
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    height: auto;
+  }
 `;
 
 const Left = styled.div`
   width: 60%;
   margin-top: 50px;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 580px) {
     width: 100%;
-    height: 100%;
+    
   }
 `;
 
@@ -31,7 +32,7 @@ const H1 = styled.h1`
   font-size: 70px;
   margin-top: 30px;
 
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 640px) {
     width: 100%;
     font-size: 20px;
   }
@@ -41,9 +42,10 @@ const Right = styled.div`
   margin-top: 50px;
   height: 100%;
   width: 50%;
+  
 
-  @media only screen and (max-width: 480px) {
-    display: none;
+  @media only screen and (max-width: 680px) {
+    width: 100%;
   }
 `;
 
@@ -51,9 +53,7 @@ const P = styled.p`
   width: 60%;
   font-size: 20px;
   margin: 20px 0;
-  @media only screen and (max-width: 480px) {
-    width: 100%;
-  }
+ 
 `;
 
 const P1 = styled.span`
@@ -69,29 +69,39 @@ const Button1 = styled.button`
   font-weight: bold;
   border: none;
   cursor: pointer;
+  @media only screen and (max-width: 640px) {
+    padding: 10px 12px;
+  }
   @media only screen and (max-width: 480px) {
-    margin-bottom: 20px;
+    font-size: 12px;
+    padding: 8px 10px;
+    
   }
 `;
 const Button2 = styled.button`
-  padding: 18px 18px;
+  display:flex;
+  
   background-color: #4285f4;
   color: white;
   border-radius: 4px;
   font-weight: 400;
   border: none;
   cursor: pointer;
-  margin-left: 10px;
+  margin-left: 12px;
   @media only screen and (max-width: 480px) {
-    margin-bottom: 20px;
+    font-size: 10px;
+    
   }
 `;
 const GoogleBtn = styled.span`
   background-color: white;
-  padding: 15px;
-  margin-left: -16px;
+  padding: 16px;
+  
   margin-right: 10px;
   font-size: 14px;
+
+  
+
 `;
 const Video = styled.video`
   margin-top: 50px;
@@ -109,14 +119,16 @@ const Home = () => {
             {" "}
             <P1>Slack is free to try</P1> for as long as you like
           </P>
-          <Button1> SING UP WITH EMAIL ADDRESS</Button1>
+          <div style={{ display:"flex"}}>
+            <Button1> SING UP WITH EMAIL ADDRESS</Button1>
           <Button2>
-            {" "}
+           
             <GoogleBtn>
               <FcGoogle />
             </GoogleBtn>
-            SING UP WITH GOOGLE
-          </Button2>
+            <span style={{ padding: "10px 8px"}}>SING UP WITH GOOGLE</span>
+          </Button2></div>
+          
         </Left>
         <Right>
           <Video loop autoPlay muted controls="">

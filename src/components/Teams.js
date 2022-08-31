@@ -22,12 +22,18 @@ const Wrapper = styled.div`
   padding: 40px 0px;
 
   justify-content: space-between;
+
+ 
 `;
 
 const FirstDiv = styled.div`
   width: 70%;
   margin: auto;
   padding-bottom: 30px;
+
+  @media only screen and (max-width: 640px) {
+    width: 90%;
+  }
 `;
 
 const H1 = styled.h1`
@@ -68,7 +74,8 @@ const Button1 = styled.button`
   font-weight: bold;
   border: none;
   cursor: pointer;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 640px) {
+    padding: 8px 10px;
     margin-bottom: 20px;
   }
 `;
@@ -81,7 +88,8 @@ const Button2 = styled.button`
   cursor: pointer;
   margin-left: 10px;
   background-color: white;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 640px) {
+    padding: 8px 10px;
     margin-bottom: 20px;
   }
 `;
@@ -148,6 +156,10 @@ const SecondDiv = styled.div`
   width: 80%;
   padding-bottom: 40px;
   margin: auto;
+
+  @media only screen and (max-width: 640px) {
+    width: 100%;
+  }
 `;
 
 const ScuessDiv = styled.ul`
@@ -155,6 +167,8 @@ const ScuessDiv = styled.ul`
   color: black;
   justify-content: space-between;
   list-style: none;
+
+  
   @media only screen and (max-width: 480px) {
     display: none;
   }
@@ -170,6 +184,9 @@ const SingleDivNum = styled.h1`
   font-size: 56px;
   font-wight: 800;
   color: #400d40;
+  @media only screen and (max-width: 640px) {
+    font-size: 40px;
+  }
 `;
 
 const ThirdDiv = styled.div`
@@ -180,11 +197,21 @@ const ThirdDiv = styled.div`
   margin: auto;
   justify-content: space-between;
   margin-bottom: 40px;
+
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+    height: auto;
+  }
+
 `;
 const Left = styled.div``;
 const Right = styled.div`
   color: black;
   width: 65%;
+
+  @media only screen and (max-width: 640px) {
+    width: 95%;
+  }
 `;
 const P1 = styled.p`
   padding-top: 10px;

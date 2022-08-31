@@ -24,11 +24,25 @@ const Wrapper = styled.div`
   justify-content: space-between;
 `;
 const Div = styled.div`
-  display: flex;
+  display: grid;
+  grid-template-columns: repeat(6, minmax(0, 1fr));
+  gap:1rem;
   align-items: center;
   width: 70%;
   margin: auto;
   justify-content: space-between;
+
+  @media only screen and (max-width: 640px) {
+    width: 100%;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    
+  }
+
+  @media only screen and (max-width: 480px) {
+    width: 100%;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    
+  }
 `;
 const H5 = styled.h5`
   color: black;
@@ -52,7 +66,7 @@ const Design = styled.div`
 const Left = styled.div`
   width: 50%;
   margin-top: 20px;
-  @media only screen and (max-width: 480px) {
+  @media only screen and (max-width: 640px) {
     width: 100%;
     height: 100%;
   }
@@ -61,8 +75,9 @@ const Right = styled.div`
   width: 50%;
   margin-top: 50px;
   height: 100%;
-  @media only screen and (max-width: 480px) {
-    display: none;
+  @media only screen and (max-width: 640px) {
+      width: 100%;
+      height: 100%;  
   }
 `;
 const DesignDiv = styled.div`
@@ -70,16 +85,42 @@ const DesignDiv = styled.div`
   justify-content: space-between;
   margin: auto;
   align-items: center;
+
+  @media only screen and (max-width: 640px) {
+    flex-direction: column;
+}
+`;
+
+const DesignDiv2 = styled.div`
+  display: flex;
+  justify-content: space-between;
+  margin: auto;
+  align-items: center;
+
+  @media only screen and (max-width: 640px) {
+    flex-direction: column-reverse;
+}
 `;
 const Title = styled.h1`
   font-size: 50px;
   color: black;
+
+  @media only screen and (max-width: 640px) {
+    font-size: 25px;
+}
 `;
 const Description = styled.p`
   margin: 10px;
   color: black;
   width: 66%;
   line-height: 20px;
+
+  @media only screen and (max-width: 640px) {
+    font-size: 14px;
+    width: 100%;
+    margin: 5px 0px;
+}
+
 `;
 const Video = styled.video`
   margin-top: 30px;
@@ -109,7 +150,8 @@ const CompanyList = () => {
           <H5> TRUSTED BY COMPANIES ALL OVER THE WORLD</H5>
           <Div>
             {images.map((img) => (
-              <img src={img} alt="" />
+              <div style={{padding:'0px 10px', width:"70px" }}><img src={img} alt="" /></div>
+              
             ))}
           </Div>
           {/* *********design*************** */}
@@ -139,10 +181,10 @@ const CompanyList = () => {
                 </Description>
               </Right>
             </DesignDiv>
-            <DesignDiv>
+            <DesignDiv2>
               <Left>
                 <Title>
-                  Choose how you <br /> want to work{" "}
+                  Choose how you want to work{" "}
                 </Title>
                 <Description>
                   {" "}
@@ -164,7 +206,7 @@ const CompanyList = () => {
                   <source src={demo2} type="video/webm" />
                 </Video>
               </Right>
-            </DesignDiv>
+            </DesignDiv2>
             <DesignDiv>
               <Left>
                 <Video loop autoPlay muted controls="">

@@ -7,10 +7,17 @@ const Container = styled.div`
   clip-path: ellipse(75% 100% at center top);
   height: auto;
   min-height: 370px;
-  @media only screen and (max-width: 480px) {
-    flex-direction: column;
-    height: auto;
+
+  @media only screen and (max-width: 640px) {
+    
+    min-height: 260px;
   }
+
+  @media only screen and (max-width: 480px) {
+    
+    min-height: 210px;
+  }
+
 `;
 
 const H1 = styled.h1`
@@ -20,11 +27,14 @@ const H1 = styled.h1`
   align-items: center;
   margin: auto;
   padding-top: 70px;
-
   justify-content: center;
-  margin:a @media only screen and (max-width: 480px) {
-    width: 100%;
-    font-size: 20px;
+
+  @media only screen and (max-width: 640px) {
+    font-size: 25px;
+  }
+  
+  @media only screen and (max-width: 480px) {
+    font-size: 22px;
   }
 `;
 const Div = styled.div`
@@ -45,8 +55,15 @@ const Button1 = styled.button`
   cursor: pointer;
   border: 2px solid white;
   margin-left: 20px;
+
+  @media only screen and (max-width: 640px) {
+    padding: 8px 12px;
+    margin-left: 10px;
+  }
+
   @media only screen and (max-width: 480px) {
-    margin-bottom: 20px;
+    padding: 8px 12px;
+    
   }
 `;
 const Button2 = styled.button`
@@ -58,8 +75,15 @@ const Button2 = styled.button`
   cursor: pointer;
   margin-left: 10px;
   background-color: white;
+
+  @media only screen and (max-width: 640px) {
+    padding: 10px 12px;
+  
+  }
+
   @media only screen and (max-width: 480px) {
-    margin-bottom: 20px;
+    padding: 10px 12px;
+    
   }
 `;
 const Offer = () => {

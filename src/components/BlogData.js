@@ -8,7 +8,7 @@ import { BsArrowRight } from "react-icons/bs";
 
 const Container = styled.div`
   background-color: #f7f2f7;
-  height: 90vh;
+  padding-bottom: 50px;
   @media only screen and (max-width: 480px) {
     flex-direction: column;
     height: auto;
@@ -18,6 +18,10 @@ const Wrapper = styled.div`
   color: white;
   width: 80%;
   margin: auto;
+
+  @media only screen and (max-width: 640px) {
+    width: 90%;
+  }
 `;
 const H1 = styled.h1`
   font-size: 30px;
@@ -30,13 +34,23 @@ const H1 = styled.h1`
   }
 `;
 const MainDiv = styled.div`
-  display: flex;
+  display: grid;
+  gap:1rem;
+  column-gap: 1rem;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
   padding-top: 30px;
   justify-content: space-between;
   align-items: center;
   margin: auto;
+
+  @media only screen and (max-width: 640px) {
+    font-size: 20px;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+
   @media only screen and (max-width: 480px) {
     font-size: 20px;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 `;
 const Card1 = styled.div`
@@ -53,17 +67,18 @@ const Card = styled.div`
   height: 360px;
   padding: 8px;
   color: black;
-
   background-color: white;
   margin: auto;
-  @media only screen and (max-width: 480px) {
-    font-size: 20px;
-  }
+ 
 `;
 const P1 = styled.h1`
   padding-top: 10px;
   font-size: 20px;
   font-wight: 500;
+
+  
+
+ 
 `;
 const Tag = styled.p`
   margin-top: 12px;
